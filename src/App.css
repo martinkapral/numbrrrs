@@ -1,38 +1,91 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  margin-top: 20px;
+  background-color: #cbd6dd;
+  padding: 20px;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  background-color: #cbd6dd;
+  height: 400px;
+  max-width: 400px;
+  padding: 20px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 20px;
+  background: linear-gradient(145deg, #d9e5ec, #b7c1c7);
+  box-shadow: 24px 24px 48px #adb6bc, -24px -24px 48px #e9f6fe;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.instructions {
+  font-weight: 400;
+  margin-top: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dice-container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.die-face {
+  background-color: #59e390a0;
+  height: 60px;
+  width: 60px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  cursor: pointer;
+}
+
+.die-num {
+  font-size: 2rem;
+}
+
+.roll-dice {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  background-color: #df9dfeaa;
   color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.roll-dice:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roll-dice:active {
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.winner {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
 }
